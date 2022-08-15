@@ -1,7 +1,7 @@
 {
     "AWSEBDockerrunVersion": "1",
     "Image": {
-      "Name": "registry.hub.docker.com/elhaam578/2048:1"
+      "Name": "registry.hub.docker.com//elhaam578/2048"
     },
     "Ports": [
       {
