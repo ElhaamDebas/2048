@@ -3,7 +3,7 @@ pipeline {
 	agent any
 
 	environment {
-		DOCKERHUB_CREDENTIALS=credentials('goraghad')
+		DOCKERHUB_CREDENTIALS=credentials('elhaam578')
 		AWS_ACCESS_KEY_ID     = credentials('jenkins-aws-secret-key-id')
   		AWS_SECRET_ACCESS_KEY = credentials('jenkins-aws-secret-access-key')
 		ARTIFACT_NAME = 'Dockerrun.aws.json'
@@ -18,7 +18,7 @@ pipeline {
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t goraghad/2048:1 .'
+				sh 'docker build -t elhaam578/2048:1 .'
 			}
 		}
 
@@ -32,7 +32,7 @@ pipeline {
 		stage('Push') {
 
 			steps {
-				sh 'docker push goraghad/2048:1'
+				sh 'docker push elhaam578/2048:1'
 			}
 		}
 
