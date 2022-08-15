@@ -3,7 +3,7 @@ pipeline{
 	agent any
 
 	environment {
-		DOCKERHUB_CREDENTIALS=credentials('goraghad')
+		DOCKERHUB_CREDENTIALS=credentials('docker-hub')
 	}
 
 	stages {
@@ -11,7 +11,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t goraghad/2048:latest .'
+				sh 'docker build -t elhaam578/2048:latest .'
 			}
 		}
 
@@ -25,7 +25,7 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'docker push goraghad/2048:latest'
+				sh 'docker push elhaam578/2048:latest'
 			}
 		}
 	}
